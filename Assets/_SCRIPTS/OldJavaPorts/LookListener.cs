@@ -54,33 +54,33 @@
 //    // The ratio between the ranges, i.e. the thing used for mapping from on range to the other
 //    private static readonly double RangeRatio = (boxRangeEnd - boxRangeStart) / (xRightRangeEnd - xRightRangeStart);
 //
-////    private void HandleHand(Hand hand, InteractionBox interactionBox)
-////    {
-////        //TODO: this is still hyper-sensitive, but I'm not sure how to make it better
-////        Vector rawHandPos = hand.StabilizedPalmPosition;
-////        Vector boxHandPos = interactionBox.normalizePoint(rawHandPos);
-////        double newX = Input.mousePosition.x;
-////        double newY = Input.mousePosition.y;
-////
-////        bool xInRange = xRightRangeStart < boxHandPos.x & boxHandPos.x < xRightRangeEnd;
-////        bool yInRange = yRightRangeStart < boxHandPos.y & boxHandPos.y < yRightRangeEnd;
-////
-////        // Is the hand in the overall range?
-////        if (xInRange)
-////        {
-////            // Fancy Mathematics to map the right hand's range to the full range, thanks stack overflow
-////            double newXPos = (boxHandPos.x - xRightRangeStart) * RangeRatio + boxRangeStart;
-////            newX = (int) (newXPos * XScreenDiff) + XScreenMin;
-////        }
-////
-////        if (yInRange)
-////        {
-////            double newYPos = boxHandPos.y;
-////            newY = (int) (Screen.height - (YScreenDiff * newYPos + YScreenMin));
-////        }
-////
-////        //System.out.printf("%d < %f > %d | %d < %f > %d\n", xScreenMin, newX, xScreenMax, yScreenMin, newY, yScreenMax);
-////        //robot.mouseMove((int) newX, (int) newY);
-////        System.Windows.Forms.Cursor.Position = new Point(newX, newY);
-////    }
+//    private void HandleHand(Hand hand, InteractionBox interactionBox)
+//    {
+//        //TODO: this is still hyper-sensitive, but I'm not sure how to make it better
+//        Vector rawHandPos = hand.StabilizedPalmPosition;
+//        Vector boxHandPos = interactionBox.normalizePoint(rawHandPos);
+//        double newX = Input.mousePosition.x;
+//        double newY = Input.mousePosition.y;
+//
+//        bool xInRange = xRightRangeStart < boxHandPos.x & boxHandPos.x < xRightRangeEnd;
+//        bool yInRange = yRightRangeStart < boxHandPos.y & boxHandPos.y < yRightRangeEnd;
+//
+//        // Is the hand in the overall range?
+//        if (xInRange)
+//        {
+//            // Fancy Mathematics to map the right hand's range to the full range, thanks stack overflow
+//            double newXPos = (boxHandPos.x - xRightRangeStart) * RangeRatio + boxRangeStart;
+//            newX = (int) (newXPos * XScreenDiff) + XScreenMin;
+//        }
+//
+//        if (yInRange)
+//        {
+//            double newYPos = boxHandPos.y;
+//            newY = (int) (Screen.height - (YScreenDiff * newYPos + YScreenMin));
+//        }
+//
+//        //System.out.printf("%d < %f > %d | %d < %f > %d\n", xScreenMin, newX, xScreenMax, yScreenMin, newY, yScreenMax);
+//        //robot.mouseMove((int) newX, (int) newY);
+//        //System.Windows.Forms.Cursor.Position = new Point(newX, newY);
+//    }
 //}

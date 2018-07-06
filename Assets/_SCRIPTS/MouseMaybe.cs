@@ -4,35 +4,124 @@ using UnityEngine;
 using System.Runtime.InteropServices;
 using Leap;
 using Leap.Unity;
+using UnityEngine.Assertions;
+using UnityEngine.Experimental.UIElements;
+using System;
+using System.Runtime.InteropServices;
 
-public class MouseMaybe : MonoBehaviour
+
+//[ExecuteInEditMode]
+public class MouseMaybe : Detector
 {
     [DllImport("user32.dll")]
-    static extern bool SetCursorPos(int X, int Y);
+    static extern bool SetCursorPos(int x, int y);
 
-    public int XPos = 30, YPos = 1000;
+    [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+    public static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint cButtons, UIntPtr dwExtraInfo);
 
-    public int ScreenWidth = Screen.width;
-    public int ScreenHeight = Screen.height;
+    private const uint MOUSEEVENTF_LEFTDOWN = 0x02;
+    private const uint MOUSEEVENTF_LEFTUP = 0x04;
+    private const uint MOUSEEVENTF_RIGHTDOWN = 0x08;
+    private const uint MOUSEEVENTF_RIGHTUP = 0x10;
+
+    //[DllImport("user32.dll")]
+    //static extern bool SetCursorPos(int x, int y);
+
+    public int DebugScreenWidth = 1920;
+    public int DebugScreenHeight = 1080;
     public HandModelBase PointerHand;
+    Hand _hand;
+    public Camera Cam;
 
     Vector3 _palmPosition;
     Vector3 _palmDirection;
 
-    // Use this for initialization
-    void Start()
-    {
-        Debug.Log("Screen Width : " + ScreenWidth);
-        Debug.Log("Screen Height : " + ScreenHeight);
-    }
+
+    public double OnDepth = .6;
+    public double OffDepth = .5;
 
     // Update is called once per frame
     void Update()
     {
-        _palmPosition = PointerHand.GetLeapHand().PalmPosition.ToVector3();
-        _palmDirection = PointerHand.GetLeapHand().Direction.ToVector3();
+        Vector3 fingerTip = PointerHand.GetLeapHand().GetIndex().TipPosition.ToVector3();
+        Vector3 screenVector3 = Cam.WorldToScreenPoint(fingerTip);
 
-        Debug.DrawRay(_palmPosition, _palmDirection);
-        //SetCursorPos(XPos, YPos); //Call this when you want to set the mouse position
+        float xPos = MapToRange(screenVector3.x, 0, Cam.pixelWidth, 0, DebugScreenWidth);
+        float yPos = MapToRange(Cam.pixelHeight - screenVector3.y, 0, Cam.pixelHeight, 0, DebugScreenHeight);
+
+        Assert.IsTrue(MapToRange(0, 0, Cam.pixelWidth, 0, DebugScreenWidth) == 0);
+        Assert.IsTrue(MapToRange(Cam.pixelWidth, 0, Cam.pixelWidth, 0, DebugScreenWidth) == DebugScreenWidth);
+
+        if (PointerHand.isActiveAndEnabled)
+        {
+            SetCursorPos((int) xPos, (int) yPos); // Call this when you want to set the mouse position
+        }
+
+
+        Debug.Log(screenVector3);
+
+        if (screenVector3.z >= OnDepth)
+        {
+            Activate();
+        }
+
+        if (screenVector3.z < OffDepth)
+        {
+            Deactivate();
+        }
+    }
+
+    int MapToRange(float input, int inputRangeStart, int inputRangeEnd, int outputRangeStart, int outputRangeEnd)
+    {
+        var inputRatio = input / inputRangeEnd;
+        var output = inputRatio * outputRangeEnd;
+
+        //var slope = (outputRangeEnd - outputRangeStart) / (inputRangeEnd - inputRangeStart);
+        //var output = outputRangeStart + slope * (input - inputRangeStart);
+//        Debug.Log("input: " + input +
+//                  " inputRangeStart: " + inputRangeStart +
+//                  " inputRangeEnd: " + inputRangeEnd +
+//                  " outputRangeStart: " + outputRangeStart +
+//                  " outputRangeEnd: " + outputRangeEnd +
+//                  " inputRatio: " + inputRatio +
+//                  //" slope: " + slope +
+//                  " output: " + output);
+
+        return (int) output;
+    }
+
+    public void sendMouseRightclick(uint x, uint y)
+    {
+        mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, x, y, 0, (UIntPtr) 0);
+    }
+
+//    void sendMouseDoubleClick(uint X, uint Y)
+//    {
+//        mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, X, Y, 0, 0);
+//
+//        //Thread.Sleep(150);
+//
+//        mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, X, Y, 0, 0);
+//    }
+
+//    void sendMouseRightDoubleClick(uint X, uint Y)
+//    {
+//        mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, X, Y, 0, 0);
+//
+//        //Thread.Sleep(150);
+//
+//        mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, X, Y, 0, 0);
+//    }
+
+    public void sendMouseDown()
+    {
+        Debug.Log("Mouse Down");
+        mouse_event(MOUSEEVENTF_LEFTDOWN, 50, 50, 0, (UIntPtr) 0);
+    }
+
+    public void sendMouseUp()
+    {
+        Debug.Log("Mouse Up");
+        mouse_event(MOUSEEVENTF_LEFTUP, 50, 50, 0, (UIntPtr) 0);
     }
 }
