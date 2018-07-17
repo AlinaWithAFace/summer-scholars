@@ -7,33 +7,31 @@ using UnityEngine.Events;
 
 public class ColorChanger : MonoBehaviour
 {
-    public List<HandModelBase> hands;
-    //public HandModelBase HandModelBase;
-
+    public List<HandModelBase> Hands;
     private Color _originalColor = Color.black;
     public Color NewColor = Color.black;
 
     private void Awake()
     {
-        _originalColor = hands[0].GetComponentInChildren<Renderer>().material.color;
+        if (Hands[0] != null)
+        {
+            _originalColor = Hands[0].GetComponentInChildren<Renderer>().material.color;
+        }
+
         Debug.Log("Original Color " + _originalColor);
     }
 
     public void TurnColor()
     {
-        foreach (var handModelBase in hands)
+        foreach (var handModelBase in Hands)
         {
             handModelBase.GetComponentInChildren<Renderer>().material.color = NewColor;
         }
-
-        //myColor = new Color(Random.value, Random.value, Random.value);
-        //HandModelBase.GetComponentInChildren<Renderer>().material.color = NewColor;
     }
 
     public void UnColor()
     {
-        //HandModelBase.GetComponentInChildren<Renderer>().material.color = _originalColor;
-        foreach (var handModelBase in hands)
+        foreach (var handModelBase in Hands)
         {
             handModelBase.GetComponentInChildren<Renderer>().material.color = _originalColor;
         }

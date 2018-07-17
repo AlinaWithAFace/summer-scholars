@@ -56,7 +56,10 @@
     <Compile Include="Assets\_SCRIPTS\ColorChanger.cs" />
     <Compile Include="Assets\_SCRIPTS\Countdown.cs" />
     <Compile Include="Assets\_SCRIPTS\DualAxisExample.cs" />
+    <Compile Include="Assets\_SCRIPTS\EnemyHealthAndDying.cs" />
     <Compile Include="Assets\_SCRIPTS\FollowPalmNormal.cs" />
+    <Compile Include="Assets\_SCRIPTS\ForceParentToTarget.cs" />
+    <Compile Include="Assets\_SCRIPTS\Health.cs" />
     <Compile Include="Assets\_SCRIPTS\MouseMaybe.cs" />
     <Compile Include="Assets\_SCRIPTS\MoveOnKeyPress.cs" />
     <Compile Include="Assets\_SCRIPTS\OldJavaPorts\ActionFlag.cs" />
@@ -64,10 +67,11 @@
     <Compile Include="Assets\_SCRIPTS\OldJavaPorts\LookListener.cs" />
     <Compile Include="Assets\_SCRIPTS\OldJavaPorts\MovementListener.cs" />
     <Compile Include="Assets\_SCRIPTS\OldJavaPorts\Utilities.cs" />
+    <Compile Include="Assets\_SCRIPTS\ParticlePummel.cs" />
     <Compile Include="Assets\_SCRIPTS\ParticleSystemControl.cs" />
     <Compile Include="Assets\_SCRIPTS\ProximityDetectorExtension.cs" />
-    <Compile Include="Assets\_SCRIPTS\PushOverSphere.cs" />
     <Compile Include="Assets\_SCRIPTS\SmoothMouseLook.cs" />
+    <Compile Include="Assets\_SCRIPTS\SpawnPrefab.cs" />
     <Compile Include="Assets\_SCRIPTS\TimeManager.cs" />
     <Compile Include="Assets\_SCRIPTS\TransparentWindow.cs" />
     <Compile Include="Assets\LeapMotion\Core\Examples\Example Assets\InertiaPostProcessProvider.cs" />

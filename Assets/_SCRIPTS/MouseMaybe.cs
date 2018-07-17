@@ -43,32 +43,32 @@ public class MouseMaybe : Detector
     // Update is called once per frame
     void Update()
     {
-        Vector3 fingerTip = PointerHand.GetLeapHand().GetIndex().TipPosition.ToVector3();
-        Vector3 screenVector3 = Cam.WorldToScreenPoint(fingerTip);
-
-        float xPos = MapToRange(screenVector3.x, 0, Cam.pixelWidth, 0, DebugScreenWidth);
-        float yPos = MapToRange(Cam.pixelHeight - screenVector3.y, 0, Cam.pixelHeight, 0, DebugScreenHeight);
-
-        Assert.IsTrue(MapToRange(0, 0, Cam.pixelWidth, 0, DebugScreenWidth) == 0);
-        Assert.IsTrue(MapToRange(Cam.pixelWidth, 0, Cam.pixelWidth, 0, DebugScreenWidth) == DebugScreenWidth);
-
         if (PointerHand.isActiveAndEnabled)
         {
+            Vector3 fingerTip = PointerHand.GetLeapHand().GetIndex().TipPosition.ToVector3();
+            Vector3 screenVector3 = Cam.WorldToScreenPoint(fingerTip);
+
+            float xPos = MapToRange(screenVector3.x, 0, Cam.pixelWidth, 0, DebugScreenWidth);
+            float yPos = MapToRange(Cam.pixelHeight - screenVector3.y, 0, Cam.pixelHeight, 0, DebugScreenHeight);
+
             SetCursorPos((int) xPos, (int) yPos); // Call this when you want to set the mouse position
+
+            if (screenVector3.z >= OnDepth)
+            {
+                Activate();
+            }
+
+            if (screenVector3.z < OffDepth)
+            {
+                Deactivate();
+            }
         }
+    }
 
-
-        Debug.Log(screenVector3);
-
-        if (screenVector3.z >= OnDepth)
-        {
-            Activate();
-        }
-
-        if (screenVector3.z < OffDepth)
-        {
-            Deactivate();
-        }
+    private void OnValidate()
+    {
+        Assert.IsTrue(MapToRange(0, 0, Cam.pixelWidth, 0, DebugScreenWidth) == 0);
+        Assert.IsTrue(MapToRange(Cam.pixelWidth, 0, Cam.pixelWidth, 0, DebugScreenWidth) == DebugScreenWidth);
     }
 
     int MapToRange(float input, int inputRangeStart, int inputRangeEnd, int outputRangeStart, int outputRangeEnd)
@@ -90,38 +90,39 @@ public class MouseMaybe : Detector
         return (int) output;
     }
 
-    public void sendMouseRightclick(uint x, uint y)
+    public void SendMouseRightclick(uint x, uint y)
     {
         mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, x, y, 0, (UIntPtr) 0);
     }
 
-//    void sendMouseDoubleClick(uint X, uint Y)
+//    void SendMouseDoubleClick(uint x, uint y)
 //    {
-//        mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, X, Y, 0, 0);
+//        mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, x, y, 0, (UIntPtr) 0);
+//
+//        //Thread.Sleep(150);
+//        //yield return new WaitForSecondsRealtime(5);
+//
+//        mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, x, y, 0, (UIntPtr) 0);
+//    }
+
+//    void SendMouseRightDoubleClick(uint x, uint y)
+//    {
+//        mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, x, y, 0, (UIntPtr) 0);
 //
 //        //Thread.Sleep(150);
 //
-//        mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, X, Y, 0, 0);
+//        mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, x, y, 0, (UIntPtr) 0);
 //    }
 
-//    void sendMouseRightDoubleClick(uint X, uint Y)
-//    {
-//        mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, X, Y, 0, 0);
-//
-//        //Thread.Sleep(150);
-//
-//        mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, X, Y, 0, 0);
-//    }
-
-    public void sendMouseDown()
+    public void SendMouseDown()
     {
-        Debug.Log("Mouse Down");
+        //Debug.Log("Mouse Down");
         mouse_event(MOUSEEVENTF_LEFTDOWN, 50, 50, 0, (UIntPtr) 0);
     }
 
-    public void sendMouseUp()
+    public void SendMouseUp()
     {
-        Debug.Log("Mouse Up");
+        //Debug.Log("Mouse Up");
         mouse_event(MOUSEEVENTF_LEFTUP, 50, 50, 0, (UIntPtr) 0);
     }
 }
