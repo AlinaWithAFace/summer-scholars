@@ -5,6 +5,7 @@ using Leap.Unity;
 using UnityEngine;
 using UnityEngine.Events;
 
+[ExecuteInEditMode]
 public class HandColorChanger : MonoBehaviour
 {
     public List<HandModelBase> Hands;

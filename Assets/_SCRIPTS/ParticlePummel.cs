@@ -14,8 +14,8 @@ public class ParticlePummel : MonoBehaviour
 
     private void OnParticleCollision(GameObject other)
     {
-        Debug.Log(this.gameObject.name + " hit by " + other.gameObject.name);
-        ParticlePhysicsExtensions.GetCollisionEvents(_particleSystem, other, _collisionEvents);
+        //Debug.Log(this.gameObject.name + " hit by " + other.gameObject.name);
+        //ParticlePhysicsExtensions.GetCollisionEvents(_particleSystem, other, _collisionEvents);
 
 
         if (other.gameObject.CompareTag("Enemy"))

@@ -10,9 +10,11 @@ public class FollowPalmNormal : MonoBehaviour
 {
     public HandModelBase Target;
     [Range(0, 1)] public float PalmNormalPercent;
+    public bool showGizmos;
 
     private Vector3 _palmPosition;
     private Vector3 _palmNormal;
+    public Vector3 positionCorrection;
 
     private void Start()
     {
@@ -28,9 +30,17 @@ public class FollowPalmNormal : MonoBehaviour
             _palmNormal = Target.GetLeapHand().PalmNormal.ToVector3();
 
             if (!(_palmPosition != null | _palmNormal != null)) return;
-            Debug.DrawRay(_palmPosition, _palmNormal);
+            if (showGizmos)
+            {
+                Debug.DrawRay(_palmPosition, _palmNormal);
+            }
+
             transform.position = _palmPosition + (_palmNormal * PalmNormalPercent);
             transform.LookAt(_palmPosition + _palmNormal);
+
+            Vector3 correctedVector3 = transform.position + positionCorrection;
+            
+            transform.SetPositionAndRotation(correctedVector3, transform.rotation);
         }
         else
         {

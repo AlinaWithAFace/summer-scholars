@@ -26,7 +26,6 @@ public class ForceParentToTarget : MonoBehaviour
 //        target = FindClosestWithTag(TagToTarget).transform;
 
         StartPos = transform.position;
-        StartCoroutine(ScheduleMurder(TimeToKill));
     }
 
     // Update is called once per frame
@@ -66,12 +65,5 @@ public class ForceParentToTarget : MonoBehaviour
     }
 
 
-    IEnumerator ScheduleMurder(int delay)
-    {
-        while (this.isActiveAndEnabled)
-        {
-            yield return new WaitForSeconds(delay);
-            Destroy(this.gameObject);
-        }
-    }
+
 }

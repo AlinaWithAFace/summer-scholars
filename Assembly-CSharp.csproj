@@ -71,6 +71,7 @@
     <Compile Include="Assets\_SCRIPTS\ParticleSystemControl.cs" />
     <Compile Include="Assets\_SCRIPTS\ProximityDetectorExtension.cs" />
     <Compile Include="Assets\_SCRIPTS\SmoothMouseLook.cs" />
+    <Compile Include="Assets\_SCRIPTS\SpawnPrefab.cs" />
     <Compile Include="Assets\_SCRIPTS\TimeManager.cs" />
     <Compile Include="Assets\_SCRIPTS\TransparentWindow.cs" />
     <Compile Include="Assets\LeapMotion\Core\Examples\Example Assets\InertiaPostProcessProvider.cs" />
@@ -390,6 +391,10 @@
     <Compile Include="Assets\LeapMotion\North Star\Scripts\MeshDeformer.cs" />
     <Compile Include="Assets\LeapMotion\North Star\Scripts\SerializedCalibration.cs" />
     <Compile Include="Assets\LeapMotion\North Star\Scripts\WindowOffsetManager.cs" />
+    <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\randomParticleRotation.cs" />
+    <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\ReverseNormals.cs" />
+    <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\rotation.cs" />
+    <Compile Include="Assets\ParticleHeal.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
     <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />
@@ -494,6 +499,7 @@
     <Compile Include="Assets\SteamVR\Scripts\SteamVR_Utils.cs" />
     <None Include="Assets\LeapMotion\Modules\GraphicRenderer\Resources\GraphicRenderer.cginc" />
     <None Include="Assets\SteamVR\Resources\SteamVR_Fade.shader" />
+    <None Include="Assets\Particle Ribbon by Moonflower Carnivore\Shaders\Particle Alpha Blend HDR.shader" />
     <None Include="Assets\LeapMotion\Core\Resources\LeapCG.cginc" />
     <None Include="Assets\LeapMotion\Core\README_BEFORE_UPDATING.txt" />
     <None Include="Assets\LeapMotion\Modules\GraphicRenderer\Resources\InternalPackShader.shader" />
@@ -524,6 +530,7 @@
     <None Include="Assets\LeapMotion\Core\Version.txt" />
     <None Include="Assets\SteamVR\Resources\SteamVR_AlphaOut.shader" />
     <None Include="Assets\LeapMotion\Core\Shaders\VertexOffsetShader.shader" />
+    <None Include="Assets\Particle Ribbon by Moonflower Carnivore\readme_Simple_Particle_Ribbon.txt" />
     <None Include="Assets\SteamVR\readme.txt" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\Silhouette.shader" />
     <None Include="Assets\LeapMotion\Modules\GraphicRenderer\Shaders\DynamicUnlitTransparent.shader" />
