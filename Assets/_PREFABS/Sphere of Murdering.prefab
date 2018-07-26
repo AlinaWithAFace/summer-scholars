@@ -113,6 +113,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7071e4fccc635f43ae4554203cf9ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHealth: 3
+  Renderer: {fileID: 0}
+  LiveColor: {r: 0, g: 1, b: 0, a: 1}
+  DeadColor: {r: 1, g: 0, b: 0, a: 1}
+  HealthPercentage: 0
 --- !u!114 &114859830306949686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,7 +131,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ResetPosition: {fileID: 4264043414522088}
   TagToTarget: Player
-  target: {fileID: 0}
   TimeToKill: 10
   thrust: 0.2
 --- !u!135 &135265543086217720

@@ -9,41 +9,40 @@ public class ForceParentToTarget : MonoBehaviour
 {
     public Transform ResetPosition;
     public String TagToTarget = "Player";
-    public Transform target;
     public int TimeToKill = 10;
     public float thrust = .2f;
+    public Vector3 StartPos;
+    public Vector3 EndPos;
 
     // Use this for initialization
     void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            transform.position = ResetPosition.position;
-        }
+//        if (Input.GetKeyDown(KeyCode.Space))
+//        {
+//            transform.position = ResetPosition.position;
+//        }
+//
+//
+//        target = FindClosestWithTag(TagToTarget).transform;
 
-        if (target == null)
-        {
-            target = FindClosestWithTag(TagToTarget).transform;
-        }
-
+        StartPos = transform.position;
         StartCoroutine(ScheduleMurder(TimeToKill));
     }
 
     // Update is called once per frame
     void Update()
     {
-        var start = transform.position;
-        var end = target.transform.position;
-        Debug.DrawLine(start, end);
+        //var start = transform.position;
+        //var end = target.transform.position;
+        Debug.DrawLine(StartPos, EndPos);
 
         // Gets a vector that points from the player's position to the target's.
-        var heading = end - start;
+        var heading = EndPos - StartPos;
 
         if (this.isActiveAndEnabled)
         {
             GetComponent<Rigidbody>().AddForce(heading * thrust);
             //transform.position = Vector3.MoveTowards(transform.position, target.position, maxSpeed);
-
         }
     }
 

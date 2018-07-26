@@ -14,6 +14,12 @@ public class FollowPalmNormal : MonoBehaviour
     private Vector3 _palmPosition;
     private Vector3 _palmNormal;
 
+    private void Start()
+    {
+        _palmPosition = Vector3.forward;
+        _palmNormal = Vector3.forward;
+    }
+
     private void Update()
     {
         if (Target.isActiveAndEnabled & Target != null)
@@ -25,6 +31,11 @@ public class FollowPalmNormal : MonoBehaviour
             Debug.DrawRay(_palmPosition, _palmNormal);
             transform.position = _palmPosition + (_palmNormal * PalmNormalPercent);
             transform.LookAt(_palmPosition + _palmNormal);
+        }
+        else
+        {
+            _palmPosition = Vector3.forward;
+            _palmNormal = Vector3.forward;
         }
     }
 }
