@@ -24,23 +24,26 @@ public class FollowPalmNormal : MonoBehaviour
 
     private void Update()
     {
-        if (Target.isActiveAndEnabled & Target != null)
+        if (Target != null)
         {
-            _palmPosition = Target.GetLeapHand().PalmPosition.ToVector3();
-            _palmNormal = Target.GetLeapHand().PalmNormal.ToVector3();
-
-            if (!(_palmPosition != null | _palmNormal != null)) return;
-            if (showGizmos)
+            if (Target.isActiveAndEnabled)
             {
-                Debug.DrawRay(_palmPosition, _palmNormal);
+                _palmPosition = Target.GetLeapHand().PalmPosition.ToVector3();
+                _palmNormal = Target.GetLeapHand().PalmNormal.ToVector3();
+
+                if (!(_palmPosition != null | _palmNormal != null)) return;
+                if (showGizmos)
+                {
+                    Debug.DrawRay(_palmPosition, _palmNormal);
+                }
+
+                transform.position = _palmPosition + (_palmNormal * PalmNormalPercent);
+                transform.LookAt(_palmPosition + _palmNormal);
+
+                Vector3 correctedVector3 = transform.position + positionCorrection;
+
+                transform.SetPositionAndRotation(correctedVector3, transform.rotation);
             }
-
-            transform.position = _palmPosition + (_palmNormal * PalmNormalPercent);
-            transform.LookAt(_palmPosition + _palmNormal);
-
-            Vector3 correctedVector3 = transform.position + positionCorrection;
-            
-            transform.SetPositionAndRotation(correctedVector3, transform.rotation);
         }
         else
         {
