@@ -8,6 +8,7 @@ using UnityEngine.Assertions;
 using UnityEngine.Experimental.UIElements;
 using System;
 using System.Runtime.InteropServices;
+using UnityEngine.Assertions.Must;
 
 
 //[ExecuteInEditMode]
@@ -43,7 +44,7 @@ public class MouseMaybe : Detector
     // Update is called once per frame
     void Update()
     {
-        if (PointerHand.isActiveAndEnabled)
+        if (PointerHand.isActiveAndEnabled & Cam != null)
         {
             Vector3 fingerTip = PointerHand.GetLeapHand().GetIndex().TipPosition.ToVector3();
             Vector3 screenVector3 = Cam.WorldToScreenPoint(fingerTip);
@@ -67,8 +68,11 @@ public class MouseMaybe : Detector
 
     private void OnValidate()
     {
-        Assert.IsTrue(MapToRange(0, 0, Cam.pixelWidth, 0, DebugScreenWidth) == 0);
-        Assert.IsTrue(MapToRange(Cam.pixelWidth, 0, Cam.pixelWidth, 0, DebugScreenWidth) == DebugScreenWidth);
+        if (Cam != null)
+        {
+            Assert.IsTrue(MapToRange(0, 0, Cam.pixelWidth, 0, DebugScreenWidth) == 0);
+            Assert.IsTrue(MapToRange(Cam.pixelWidth, 0, Cam.pixelWidth, 0, DebugScreenWidth) == DebugScreenWidth);
+        }
     }
 
     int MapToRange(float input, int inputRangeStart, int inputRangeEnd, int outputRangeStart, int outputRangeEnd)

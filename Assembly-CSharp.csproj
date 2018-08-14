@@ -63,6 +63,8 @@
     <Compile Include="Assets\_SCRIPTS\HandColorChanger.cs" />
     <Compile Include="Assets\_SCRIPTS\HealthAndDying.cs" />
     <Compile Include="Assets\_SCRIPTS\HitableByEnemies.cs" />
+    <Compile Include="Assets\_SCRIPTS\IGameManager.cs" />
+    <Compile Include="Assets\_SCRIPTS\ManagerStatus.cs" />
     <Compile Include="Assets\_SCRIPTS\MouseMaybe.cs" />
     <Compile Include="Assets\_SCRIPTS\MoveOnKeyPress.cs" />
     <Compile Include="Assets\_SCRIPTS\OldJavaPorts\ActionFlag.cs" />
@@ -75,6 +77,7 @@
     <Compile Include="Assets\_SCRIPTS\ParticleSystemControl.cs" />
     <Compile Include="Assets\_SCRIPTS\ProximityDetectorExtension.cs" />
     <Compile Include="Assets\_SCRIPTS\ShipControls.cs" />
+    <Compile Include="Assets\_SCRIPTS\ShipManager.cs" />
     <Compile Include="Assets\_SCRIPTS\SmoothMouseLook.cs" />
     <Compile Include="Assets\_SCRIPTS\SpawnPrefab.cs" />
     <Compile Include="Assets\_SCRIPTS\TimeManager.cs" />

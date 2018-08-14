@@ -33,13 +33,13 @@ public class HealthAndDying : MonoBehaviour
         {
             _hitable = false;
             CurrentHealth--;
-            Debug.Log(this.name + " hit, hp: " + CurrentHealth + " / " + MaxHealth);
+            //Debug.Log(this.name + " hit, hp: " + CurrentHealth + " / " + MaxHealth);
             yield return new WaitForSeconds(.4f);
             _hitable = true;
 
             if (_healthPercentage <= 0)
             {
-                Debug.Log(this.gameObject.name + " dead");
+                //Debug.Log(this.gameObject.name + " dead");
                 Destroy(this.gameObject);
             }
         }
@@ -51,7 +51,7 @@ public class HealthAndDying : MonoBehaviour
         {
             _healable = false;
             CurrentHealth++;
-            Debug.Log(this.name + " healed, hp: " + CurrentHealth + " / " + MaxHealth);
+            //Debug.Log(this.name + " healed, hp: " + CurrentHealth + " / " + MaxHealth);
             yield return new WaitForSeconds(.4f);
             _healable = true;
         }
@@ -59,7 +59,7 @@ public class HealthAndDying : MonoBehaviour
 
     void ColorByHealth()
     {
-        Debug.Log(_healthPercentage);
+        //Debug.Log(_healthPercentage);
         _healthPercentage = CurrentHealth / MaxHealth;
         Renderer.material.color = Color.Lerp(DeadColor, LiveColor, _healthPercentage);
     }
