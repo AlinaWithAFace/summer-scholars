@@ -691,7 +691,7 @@ PlayerSettings:
   cloudServicesEnabled:
     Analytics: 0
     Build: 0
-    Collab: 1
+    Collab: 0
     ErrorHub: 0
     Game_Performance: 0
     Hub: 0
@@ -701,7 +701,7 @@ PlayerSettings:
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
   cloudProjectId: 0c5f4a79-408e-460d-864b-e991d4a1a7ce
-  projectName: summer-scholars
+  projectName: vip-vr
   organizationId: alinawithaface
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

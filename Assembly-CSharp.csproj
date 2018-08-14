@@ -78,6 +78,7 @@
     <Compile Include="Assets\_SCRIPTS\SpawnPrefab.cs" />
     <Compile Include="Assets\_SCRIPTS\TimeManager.cs" />
     <Compile Include="Assets\_SCRIPTS\TransparentWindow.cs" />
+    <Compile Include="Assets\ForceForward.cs" />
     <Compile Include="Assets\LeapMotion\Core\Examples\Example Assets\InertiaPostProcessProvider.cs" />
     <Compile Include="Assets\LeapMotion\Core\Examples\Example Assets\ProjectionPostProcessProvider.cs" />
     <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Arm.cs" />
