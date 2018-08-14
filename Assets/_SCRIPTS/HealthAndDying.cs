@@ -2,7 +2,6 @@
 using System.Collections;
 using UnityEngine;
 
-[ExecuteInEditMode]
 public class HealthAndDying : MonoBehaviour
 {
     public float MaxHealth = 3;
