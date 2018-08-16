@@ -64,9 +64,11 @@
     <Compile Include="Assets\_SCRIPTS\HealthAndDying.cs" />
     <Compile Include="Assets\_SCRIPTS\HitableByEnemies.cs" />
     <Compile Include="Assets\_SCRIPTS\IGameManager.cs" />
+    <Compile Include="Assets\_SCRIPTS\Managers.cs" />
     <Compile Include="Assets\_SCRIPTS\ManagerStatus.cs" />
     <Compile Include="Assets\_SCRIPTS\MouseMaybe.cs" />
     <Compile Include="Assets\_SCRIPTS\MoveOnKeyPress.cs" />
+    <Compile Include="Assets\_SCRIPTS\NetworkService.cs" />
     <Compile Include="Assets\_SCRIPTS\OldJavaPorts\ActionFlag.cs" />
     <Compile Include="Assets\_SCRIPTS\OldJavaPorts\GestureListener.cs" />
     <Compile Include="Assets\_SCRIPTS\OldJavaPorts\LookListener.cs" />
@@ -82,6 +84,8 @@
     <Compile Include="Assets\_SCRIPTS\SpawnPrefab.cs" />
     <Compile Include="Assets\_SCRIPTS\TimeManager.cs" />
     <Compile Include="Assets\_SCRIPTS\TransparentWindow.cs" />
+    <Compile Include="Assets\_SCRIPTS\WeatherController.cs" />
+    <Compile Include="Assets\_SCRIPTS\WeatherManager.cs" />
     <Compile Include="Assets\LeapMotion\Core\Examples\Example Assets\InertiaPostProcessProvider.cs" />
     <Compile Include="Assets\LeapMotion\Core\Examples\Example Assets\ProjectionPostProcessProvider.cs" />
     <Compile Include="Assets\LeapMotion\Core\Plugins\LeapCSharp\Arm.cs" />
@@ -569,10 +573,12 @@
     <None Include="Assets\TiltBrush\Assets\Brushes\Shared\Shaders\DiffuseOpaqueDoubleSided.shader" />
     <None Include="Assets\LeapMotion\Modules\GraphicRenderer\Resources\InternalPackShader.shader" />
     <None Include="Assets\SteamVR\Resources\SteamVR_ClearAll.shader" />
+    <None Include="Assets\_TEXTURES\SkyboxSet1\LICENSE.txt" />
     <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
     <None Include="Assets\LeapMotion\Modules\GraphicRenderer\Resources\BakedRenderer.cginc" />
+    <None Include="Assets\Firebase\Plugins\link.xml" />
     <None Include="Assets\LeapMotion\North Star\Materials\EyePorts\Shaders\TwoSidedUnlit.shader" />
-    <None Include="Assets\_MATERIALS\MakeTransparent.shader" />
+    <None Include="Assets\_SHADERS\MakeTransparent.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Shared\Shaders\DiffuseOpaqueSingleSided.shader" />
     <None Include="Assets\LeapMotion\Core\readme.txt" />
     <None Include="Assets\TiltBrush\Assets\Shaders\Unlit-Diffuse.shader" />
@@ -586,6 +592,7 @@
     <None Include="Assets\TiltBrush\Assets\Shaders\Include\Brush.cginc" />
     <None Include="Assets\LeapMotion\North Star\Materials\EyePorts\Shaders\Culling_Off.shader" />
     <None Include="Assets\LeapMotion\Modules\GraphicRenderer\Shaders\DynamicSurfaceTransparent.shader" />
+    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-analytics-unity\maven-metadata.xml" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\Petal\Petal.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\Waveform\Waveform.shader" />
     <None Include="Assets\LeapMotion\Core\Dependencies.txt" />
@@ -595,6 +602,7 @@
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\Stars\Stars.shader" />
     <None Include="Assets\LeapMotion\Modules\GraphicRenderer\Shaders\DynamicSurface.shader" />
     <None Include="Assets\LeapMotion\Modules\GraphicRenderer\Shaders\DynamicUnlit.shader" />
+    <None Include="Assets\_SHADERS\Skybox-Blended.shader" />
     <None Include="Assets\LeapMotion\Core\Shaders\ThresholdOverlay.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Shared\Shaders\Bloom.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\Embers\Embers.shader" />
@@ -615,6 +623,8 @@
     <None Include="Assets\TiltBrush\Assets\Brushes\Shared\Shaders\Unlit.shader" />
     <None Include="Assets\TiltBrushExamples\Assets\Materials\AlwaysVisible.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\DoubleTaperedFlat\DiffuseNoTextureDoubleSided.shader" />
+    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
+    <None Include="Assets\_TEXTURES\SkyboxSet1\README.txt" />
     <None Include="Assets\LeapMotion\Modules\GraphicRenderer\Examples\Shaders\Baked_SurfaceExample1.shader" />
     <None Include="Assets\TiltBrush\Assets\Shaders\Include\Particles.cginc" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\Fire\Fire.shader" />
@@ -850,8 +860,26 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="Firebase.Analytics">
+      <HintPath>D:/Git/summer-scholars/Assets/Firebase/Plugins/Firebase.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.App">
+      <HintPath>D:/Git/summer-scholars/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Platform">
+      <HintPath>D:/Git/summer-scholars/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.MiniJson">
+      <HintPath>D:/Git/summer-scholars/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+    </Reference>
     <Reference Include="InteractionEngineUtility">
       <HintPath>D:/Git/summer-scholars/Assets/LeapMotion/Modules/InteractionEngine/Plugins/InteractionEngineUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Compat">
+      <HintPath>D:/Git/summer-scholars/Assets/Parse/Plugins/Unity.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Tasks">
+      <HintPath>D:/Git/summer-scholars/Assets/Parse/Plugins/Unity.Tasks.dll</HintPath>
     </Reference>
     <Reference Include="CSCore">
       <HintPath>D:/Git/summer-scholars/Assets/ThirdParty/CSCore/CSCore.dll</HintPath>

@@ -4,18 +4,22 @@ using UnityEngine;
 
 namespace _SCRIPTS
 {
-    public class ShipManager : MonoBehaviour, IGameManager
+    public class ShipManager : MonoBehaviour
     {
         public ManagerStatus status { get; private set; }
         public int health { get; private set; }
         public int maxHealth { get; private set; }
 
-        public static int thrust { get; private set; }
-        public static int maxThrust { get; private set; }
+        public int thrust { get; private set; }
+        public int maxThrust { get; private set; }
 
-        public static Transform ShipTransform;
+        public Transform ShipTransform { get; private set; }
 
-        private static bool _thrustModifiable = true;
+        private bool _thrustModifiable = true;
+
+
+        public float thrustLinearMap;
+        public float steerLinearMap;
 
         public void Startup()
         {
@@ -29,7 +33,7 @@ namespace _SCRIPTS
             status = ManagerStatus.Started;
         }
 
-        public static IEnumerator ChangeThrust(int value)
+        public IEnumerator ChangeThrust(int value)
         {
             Debug.Log("Trying to Thrust!");
             if (_thrustModifiable)

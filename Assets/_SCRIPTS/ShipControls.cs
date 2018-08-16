@@ -22,7 +22,7 @@ public enum ButtonSelect
 public class ShipControls : MonoBehaviour
 {
     public ButtonSelect myButtonSelect = ButtonSelect.Forward;
-    public Transform ThingToForceForward = ShipManager.ShipTransform;
+    public Transform ThingToForceForward;
     public bool debugTrue = false;
 
     // Use this for initialization
@@ -44,22 +44,22 @@ public class ShipControls : MonoBehaviour
             switch (myButtonSelect)
             {
                 case ButtonSelect.Forward:
-                    ThingToForceForward.Translate(Vector3.forward * Time.deltaTime * ShipManager.thrust);
+                    //ThingToForceForward.Translate(Vector3.forward * Time.deltaTime * ShipManager.thrust);
                     break;
                 case ButtonSelect.Backward:
-                    ThingToForceForward.Translate(Vector3.back * Time.deltaTime * ShipManager.thrust);
+                    //ThingToForceForward.Translate(Vector3.back * Time.deltaTime * ShipManager.thrust);
                     break;
                 case ButtonSelect.Left:
-                    ThingToForceForward.Translate(Vector3.left * Time.deltaTime * ShipManager.thrust);
+                    //ThingToForceForward.Translate(Vector3.left * Time.deltaTime * ShipManager.thrust);
                     break;
                 case ButtonSelect.Right:
-                    ThingToForceForward.Translate(Vector3.right * Time.deltaTime * ShipManager.thrust);
+                    //ThingToForceForward.Translate(Vector3.right * Time.deltaTime * ShipManager.thrust);
                     break;
                 case ButtonSelect.ThrustUp:
-                    ShipManager.ChangeThrust(1);
+                    //ShipManager.ChangeThrust(1);
                     break;
                 case ButtonSelect.ThrustDown:
-                    ShipManager.ChangeThrust(-1);
+                    //ShipManager.ChangeThrust(-1);
                     break;
                 default:
                     Debug.Log("Something Broke?");

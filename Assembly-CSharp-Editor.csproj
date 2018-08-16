@@ -190,6 +190,10 @@
     <Compile Include="Assets\TiltBrushExamples\Assets\Scripts\Editor\SequenceEditor.cs" />
     <Compile Include="Assets\TiltBrushExamples\Assets\Scripts\Editor\SequenceUtils.cs" />
     <Compile Include="Assets\TiltBrushExamples\Assets\Scripts\Editor\StoryTeleportPointEditor.cs" />
+    <None Include="Assets\Firebase\Editor\FirebaseAnalytics_v5.2.0_manifest.txt" />
+    <None Include="Assets\Firebase\Editor\AppDependencies.xml" />
+    <None Include="Assets\Firebase\Editor\AnalyticsDependencies.xml" />
+    <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.79.0.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Git/summer-scholars/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -442,8 +446,41 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Firebase.Editor">
+      <HintPath>D:/Git/summer-scholars/Assets/Firebase/Editor/Firebase.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Analytics">
+      <HintPath>D:/Git/summer-scholars/Assets/Firebase/Plugins/Firebase.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.App">
+      <HintPath>D:/Git/summer-scholars/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Platform">
+      <HintPath>D:/Git/summer-scholars/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.MiniJson">
+      <HintPath>D:/Git/summer-scholars/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+    </Reference>
     <Reference Include="InteractionEngineUtility">
       <HintPath>D:/Git/summer-scholars/Assets/LeapMotion/Modules/InteractionEngine/Plugins/InteractionEngineUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Compat">
+      <HintPath>D:/Git/summer-scholars/Assets/Parse/Plugins/Unity.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Tasks">
+      <HintPath>D:/Git/summer-scholars/Assets/Parse/Plugins/Unity.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.IOSResolver_v1.2.79.0">
+      <HintPath>D:/Git/summer-scholars/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.79.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.JarResolver_v1.2.79.0">
+      <HintPath>D:/Git/summer-scholars/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.79.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.VersionHandler">
+      <HintPath>D:/Git/summer-scholars/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.VersionHandlerImpl_v1.2.79.0">
+      <HintPath>D:/Git/summer-scholars/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.79.0.dll</HintPath>
     </Reference>
     <Reference Include="JetBrains.Rider.Unity.Editor.Plugin.Repacked">
       <HintPath>D:/Git/summer-scholars/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
