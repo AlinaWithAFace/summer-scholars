@@ -16,7 +16,7 @@ public class NetworkService
     {
         using (UnityWebRequest request = UnityWebRequest.Get(url))
         {
-            yield return request.Send();
+            yield return request.SendWebRequest();
 
             if (request.isNetworkError)
             {
@@ -33,7 +33,7 @@ public class NetworkService
         }
     }
 
-    public IEnumerator GetWeatherXML(Action<String> callback)
+    public IEnumerator GetWeatherXml(Action<String> callback)
     {
         Debug.Log("Getting Weather at " + xmlApi);
         return CallAPI(xmlApi, callback);

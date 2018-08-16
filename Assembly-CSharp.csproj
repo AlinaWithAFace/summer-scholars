@@ -60,12 +60,15 @@
     <Compile Include="Assets\_SCRIPTS\DualAxisExample.cs" />
     <Compile Include="Assets\_SCRIPTS\FollowPalmNormal.cs" />
     <Compile Include="Assets\_SCRIPTS\ForceParentToTarget.cs" />
+    <Compile Include="Assets\_SCRIPTS\GameEvent.cs" />
     <Compile Include="Assets\_SCRIPTS\HandColorChanger.cs" />
     <Compile Include="Assets\_SCRIPTS\HealthAndDying.cs" />
     <Compile Include="Assets\_SCRIPTS\HitableByEnemies.cs" />
     <Compile Include="Assets\_SCRIPTS\IGameManager.cs" />
     <Compile Include="Assets\_SCRIPTS\Managers.cs" />
     <Compile Include="Assets\_SCRIPTS\ManagerStatus.cs" />
+    <Compile Include="Assets\_SCRIPTS\Messenger.cs" />
+    <Compile Include="Assets\_SCRIPTS\MessengerUnitTest.cs" />
     <Compile Include="Assets\_SCRIPTS\MouseMaybe.cs" />
     <Compile Include="Assets\_SCRIPTS\MoveOnKeyPress.cs" />
     <Compile Include="Assets\_SCRIPTS\NetworkService.cs" />
