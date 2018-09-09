@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Xml;
 using UnityEngine;
 using _SCRIPTS;
+using MiniJSON;
 
 public class WeatherManager : MonoBehaviour, IGameManager
 {
@@ -17,6 +18,7 @@ public class WeatherManager : MonoBehaviour, IGameManager
         Debug.Log("Weather manager starting...");
         _network = service;
         StartCoroutine(_network.GetWeatherXml(OnXmlDataLoaded));
+        //StartCoroutine(_network.GetWeatherXml(OnJsonDataLoaded));
         status = ManagerStatus.Initializing;
     }
 
@@ -33,6 +35,20 @@ public class WeatherManager : MonoBehaviour, IGameManager
         Debug.Log("Value: " + value);
 
         Messenger.Broadcast(GameEvent.WEATHER_UPDATED);
+        status = ManagerStatus.Started;
+    }
+
+    public void OnJsonDataLoaded(string data)
+    {
+        Dictionary<string, object> dict;
+        dict = Json.Deserialize(data) as Dictionary<string, object>;
+
+        Dictionary<string, object> clouds = (Dictionary<string, object>) dict["clouds"];
+        cloudValue = (long) clouds["all"] / 100f;
+        Debug.Log("Value: " + cloudValue);
+
+        Messenger.Broadcast(GameEvent.WEATHER_UPDATED);
+
         status = ManagerStatus.Started;
     }
 }

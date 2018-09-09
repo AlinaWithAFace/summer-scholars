@@ -12,6 +12,8 @@ public class NetworkService
 
     private string xmlApi = "http://api.openweathermap.org/data/2.5/weather?q=Chicago,us&mode=xml&APPID=" + key;
 
+    private string jsonApi = "http://api.openweathermap.org/data/2.5/weather?q=Chicago,us&APPID=" + key;
+
     private IEnumerator CallAPI(string url, Action<string> callback)
     {
         using (UnityWebRequest request = UnityWebRequest.Get(url))
@@ -37,5 +39,10 @@ public class NetworkService
     {
         Debug.Log("Getting Weather at " + xmlApi);
         return CallAPI(xmlApi, callback);
+    }
+
+    public IEnumerator GetWeatherJson(Action<string> callback)
+    {
+        return CallAPI(jsonApi, callback);
     }
 }

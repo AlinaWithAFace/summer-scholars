@@ -24,7 +24,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_2_2;UNITY_2018_2;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;TILTBRUSH_STEAMVRPRESENT</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_2_2;UNITY_2018_2;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;TILTBRUSH_STEAMVRPRESENT</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -69,6 +69,7 @@
     <Compile Include="Assets\_SCRIPTS\ManagerStatus.cs" />
     <Compile Include="Assets\_SCRIPTS\Messenger.cs" />
     <Compile Include="Assets\_SCRIPTS\MessengerUnitTest.cs" />
+    <Compile Include="Assets\_SCRIPTS\MiniJSON.cs" />
     <Compile Include="Assets\_SCRIPTS\MouseMaybe.cs" />
     <Compile Include="Assets\_SCRIPTS\MoveOnKeyPress.cs" />
     <Compile Include="Assets\_SCRIPTS\NetworkService.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\_SCRIPTS\ParticleHeal.cs" />
     <Compile Include="Assets\_SCRIPTS\ParticlePummel.cs" />
     <Compile Include="Assets\_SCRIPTS\ParticleSystemControl.cs" />
+    <Compile Include="Assets\_SCRIPTS\PianoManager.cs" />
     <Compile Include="Assets\_SCRIPTS\ProximityDetectorExtension.cs" />
     <Compile Include="Assets\_SCRIPTS\ShipControls.cs" />
     <Compile Include="Assets\_SCRIPTS\ShipManager.cs" />
@@ -406,6 +408,26 @@
     <Compile Include="Assets\LeapMotion\North Star\Scripts\MeshDeformer.cs" />
     <Compile Include="Assets\LeapMotion\North Star\Scripts\SerializedCalibration.cs" />
     <Compile Include="Assets\LeapMotion\North Star\Scripts\WindowOffsetManager.cs" />
+    <Compile Include="Assets\MySynthesizer\plugins\MyWebAudioStreamer.cs" />
+    <Compile Include="Assets\MySynthesizer\samples\scripts\ButtonShortcut.cs" />
+    <Compile Include="Assets\MySynthesizer\samples\scripts\DebugConsole.cs" />
+    <Compile Include="Assets\MySynthesizer\samples\scripts\GridButton.cs" />
+    <Compile Include="Assets\MySynthesizer\samples\scripts\Keyboard.cs" />
+    <Compile Include="Assets\MySynthesizer\samples\scripts\KeyProperty.cs" />
+    <Compile Include="Assets\MySynthesizer\samples\scripts\MMLBoxSample.cs" />
+    <Compile Include="Assets\MySynthesizer\samples\scripts\MMLPlayer.cs" />
+    <Compile Include="Assets\MySynthesizer\samples\scripts\MMLTesterSample.cs" />
+    <Compile Include="Assets\MySynthesizer\samples\scripts\PresetButton.cs" />
+    <Compile Include="Assets\MySynthesizer\samples\scripts\SampleTools.cs" />
+    <Compile Include="Assets\MySynthesizer\samples\scripts\ToneEditor.cs" />
+    <Compile Include="Assets\MySynthesizer\samples\scripts\ToneEditorCT8.cs" />
+    <Compile Include="Assets\MySynthesizer\samples\scripts\WaveTable.cs" />
+    <Compile Include="Assets\MySynthesizer\scripts\MyExtensions.cs" />
+    <Compile Include="Assets\MySynthesizer\scripts\MyFakeTask.cs" />
+    <Compile Include="Assets\MySynthesizer\scripts\MyMMLBox.cs" />
+    <Compile Include="Assets\MySynthesizer\scripts\MyMMLClip.cs" />
+    <Compile Include="Assets\MySynthesizer\scripts\MyMMLPlayer.cs" />
+    <Compile Include="Assets\MySynthesizer\scripts\MySyntheStation.cs" />
     <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\randomParticleRotation.cs" />
     <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\ReverseNormals.cs" />
     <Compile Include="Assets\Particle Ribbon by Moonflower Carnivore\Scripts\rotation.cs" />
@@ -573,19 +595,26 @@
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\HyperGrid\HyperGrid.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\Toon\Toon.shader" />
     <None Include="Assets\LeapMotion\Core\README_BEFORE_UPDATING.txt" />
+    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Shared\Shaders\DiffuseOpaqueDoubleSided.shader" />
+    <None Include="Assets\MySynthesizer\tools\SMF2MyMML.txt" />
+    <None Include="Assets\MySynthesizer\tools\MyMMLChecker.txt" />
     <None Include="Assets\LeapMotion\Modules\GraphicRenderer\Resources\InternalPackShader.shader" />
     <None Include="Assets\SteamVR\Resources\SteamVR_ClearAll.shader" />
+    <None Include="Assets\MySynthesizer\samples\mml\PresetToneTemplate.mml.txt" />
     <None Include="Assets\_TEXTURES\SkyboxSet1\LICENSE.txt" />
     <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />
     <None Include="Assets\LeapMotion\Modules\GraphicRenderer\Resources\BakedRenderer.cginc" />
     <None Include="Assets\Firebase\Plugins\link.xml" />
     <None Include="Assets\LeapMotion\North Star\Materials\EyePorts\Shaders\TwoSidedUnlit.shader" />
     <None Include="Assets\_SHADERS\MakeTransparent.shader" />
+    <None Include="Assets\MySynthesizer\documents\Reference.txt" />
+    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-dynamic-links-unity\maven-metadata.xml" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Shared\Shaders\DiffuseOpaqueSingleSided.shader" />
     <None Include="Assets\LeapMotion\Core\readme.txt" />
     <None Include="Assets\TiltBrush\Assets\Shaders\Unlit-Diffuse.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\Hypercolor\HypercolorDoubleSided.shader" />
+    <None Include="Assets\MySynthesizer\plugins\MySynthesizer.xml" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\Disco\Disco.shader" />
     <None Include="Assets\LeapMotion\Core\Shaders\RuntimeGizmos.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\WaveformPulse\NeonPulse.shader" />
@@ -609,17 +638,20 @@
     <None Include="Assets\LeapMotion\Core\Shaders\ThresholdOverlay.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Shared\Shaders\Bloom.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\Embers\Embers.shader" />
+    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-database-unity\maven-metadata.xml" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Blocks\BlocksPaper\BlocksPaper.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Blocks\BlocksGlass\BlocksGlass.shader" />
     <None Include="Assets\LeapMotion\Modules\GraphicRenderer\Shaders\BakedUnlit.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\Comet\Comet.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\WigglyGraphite\WigglyGraphiteDoubleSided.shader" />
+    <None Include="Assets\MySynthesizer\samples\mml\Hanazakari.mml.txt" />
     <None Include="Assets\LeapMotion\Core\Shaders\PassthroughForeground.shader" />
     <None Include="Assets\LeapMotion\Modules\GraphicRenderer\Resources\SphericalSpace.cginc" />
     <None Include="Assets\ThirdParty\Noise\Shaders\Noise.cginc" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\DiamondHull\DiamondHull.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\CelVinyl\CelVinyl.shader" />
     <None Include="Assets\LeapMotion\Core\Shaders\PassthroughBackground.shader" />
+    <None Include="Assets\MySynthesizer\documents\MyMMLManual.txt" />
     <None Include="Assets\LeapMotion\Modules\GraphicRenderer\Examples\Shaders\Dynamic_SurfaceExample1.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\LightWire\LightWire.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Shared\Shaders\DiffuseSingleSided.shader" />
@@ -628,8 +660,11 @@
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\DoubleTaperedFlat\DiffuseNoTextureDoubleSided.shader" />
     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
     <None Include="Assets\_TEXTURES\SkyboxSet1\README.txt" />
+    <None Include="Assets\MySynthesizer\documents\ReadMe.txt" />
     <None Include="Assets\LeapMotion\Modules\GraphicRenderer\Examples\Shaders\Baked_SurfaceExample1.shader" />
     <None Include="Assets\TiltBrush\Assets\Shaders\Include\Particles.cginc" />
+    <None Include="Assets\MySynthesizer\samples\mml\Sakura.mml.txt" />
+    <None Include="Assets\MySynthesizer\documents\Overview.txt" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\Fire\Fire.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\Streamers\Streamers.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\Rainbow\Rainbow.shader" />
@@ -647,14 +682,17 @@
     <None Include="Assets\SteamVR\readme.txt" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\Silhouette.shader" />
     <None Include="Assets\LeapMotion\Modules\GraphicRenderer\Shaders\DynamicUnlitTransparent.shader" />
+    <None Include="Assets\Firebase\Plugins\Http\link.xml" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\Smoke\Smoke.shader" />
     <None Include="Assets\SteamVR\Resources\SteamVR_ColorOut.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\Snow\Snow.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Basic\ChromaticWave\ChromaticWave.shader" />
+    <None Include="Assets\MySynthesizer\samples\mml\test01.mml.txt" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Shared\Shaders\DiffuseDoubleSided.shader" />
     <None Include="Assets\TiltBrush\Assets\Brushes\Shared\Shaders\StandardSingleSided.shader" />
     <None Include="Assets\LeapMotion\Modules\GraphicRenderer\Shaders\DynamicText.shader" />
+    <None Include="Assets\MySynthesizer\samples\mml\Flohwalzer.mml.txt" />
     <None Include="Assets\SteamVR\InteractionSystem\Readme_InteractionSystem.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Git/summer-scholars/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
@@ -869,14 +907,29 @@
     <Reference Include="Firebase.App">
       <HintPath>D:/Git/summer-scholars/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
     </Reference>
+    <Reference Include="Firebase.Auth">
+      <HintPath>D:/Git/summer-scholars/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.DynamicLinks">
+      <HintPath>D:/Git/summer-scholars/Assets/Firebase/Plugins/Firebase.DynamicLinks.dll</HintPath>
+    </Reference>
     <Reference Include="Firebase.Platform">
       <HintPath>D:/Git/summer-scholars/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
     </Reference>
     <Reference Include="Google.MiniJson">
       <HintPath>D:/Git/summer-scholars/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
     </Reference>
+    <Reference Include="Google.Sharpen">
+      <HintPath>D:/Git/summer-scholars/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
+    </Reference>
+    <Reference Include="Firebase.Database">
+      <HintPath>D:/Git/summer-scholars/Assets/Firebase/Plugins/Mono/Firebase.Database.dll</HintPath>
+    </Reference>
     <Reference Include="InteractionEngineUtility">
       <HintPath>D:/Git/summer-scholars/Assets/LeapMotion/Modules/InteractionEngine/Plugins/InteractionEngineUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="MySynthesizer">
+      <HintPath>D:/Git/summer-scholars/Assets/MySynthesizer/plugins/MySynthesizer.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Compat">
       <HintPath>D:/Git/summer-scholars/Assets/Parse/Plugins/Unity.Compat.dll</HintPath>
@@ -894,31 +947,31 @@
       <HintPath>C:/Users/VIPVR/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
-      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="System">
-      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core">
-      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Core.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/System.Core.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization">
-      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Runtime.Serialization.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/System.Runtime.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml">
-      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq">
-      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.Linq.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/System.Xml.Linq.dll</HintPath>
     </Reference>
     <Reference Include="UnityScript">
-      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/UnityScript.dll</HintPath>
     </Reference>
     <Reference Include="UnityScript.Lang">
-      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.Lang.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/UnityScript.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Boo.Lang">
-      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/2.0-api/Boo.Lang.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using _SCRIPTS;
 
 public class WeatherController : MonoBehaviour
 {
@@ -10,17 +11,26 @@ public class WeatherController : MonoBehaviour
     private float _fullIntensity;
     private float _cloudValue = 0f;
 
+    private void Awake()
+    {
+        Messenger.AddListener(GameEvent.WEATHER_UPDATED, OnWeatherUpdated);
+    }
+
+    private void OnDestroy()
+    {
+        Messenger.RemoveListener(GameEvent.WEATHER_UPDATED, OnWeatherUpdated);
+    }
+
     // Use this for initialization
     void Start()
     {
         _fullIntensity = _sun.intensity;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnWeatherUpdated()
     {
-        SetOvercast(_cloudValue);
-        _cloudValue += .005f;
+        SetOvercast(Managers.Weather.cloudValue);
+        Debug.Log("Set Clouds to " + Managers.Weather.cloudValue);
     }
 
     private void SetOvercast(float value)
